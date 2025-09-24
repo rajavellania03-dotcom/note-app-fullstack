@@ -1,0 +1,137 @@
+/* src/App.css */
+:root{
+  --bg1: #74ebd5;
+  --bg2: #ACB6E5;
+  --card: #fff;
+  --muted: #555;
+  --primary: #4CAF50;
+  --danger: #e74c3c;
+  --accent: #3498db;
+}
+
+*{box-sizing:border-box}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 30px 16px;
+  color: #222;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+}
+
+h1 {
+  text-align: center;
+  color: #111;
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+
+/* Form */
+form{
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+input, textarea{
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-actions{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+button{
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Primary / Save */
+button.primary{
+  background: var(--primary);
+  color: #fff;
+}
+button.primary:hover{ filter: brightness(0.95); }
+
+/* Secondary / Cancel */
+button.secondary{
+  background: #f0f0f0;
+  color: #333;
+}
+button.secondary:hover{ filter: brightness(0.97); }
+
+/* Notes grid */
+.notes-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.empty{
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Note card */
+.note{
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.note h3{ margin: 0 0 8px; font-size: 1.05rem; }
+.note p{ margin: 0 0 12px; color: var(--muted); flex: 1; }
+
+.actions{
+  display:flex;
+  gap: 8px;
+  margin-top: auto;
+  align-items: center;
+}
+
+/* Delete button */
+button.delete{
+  background: var(--danger);
+  color: white;
+}
+button.delete:hover{ filter: brightness(0.9); }
+
+/* Edit button */
+button.edit{
+  background: var(--accent);
+  color: white;
+}
+button.edit:hover{ filter: brightness(0.93); }
+
+.meta{
+  display:block;
+  margin-top:8px;
+  color:#999;
+  font-size:0.8rem;
+}
